@@ -41,14 +41,14 @@ https://api.spacexdata.com/v3/launches
 ## 📂 Project Structure
 src/app/
 │
-├── missionlist/ # Displays all missions
-├── missionfilter/ # Filter missions by year
-├── missiondetails/ # Detailed mission view
-├── services/ # API service
-├── models/ # Interfaces
-├── app.routes.ts # Routing configuration
-├── app.config.ts # App configuration
-
+├── missionlist/ # Displays all missions 
+├── missionfilter/ # Filter missions by year 
+├── missiondetails/ # Detailed mission view 
+├── services/ # API service 
+├── models/ # Interfaces 
+├── app.routes.ts # Routing configuration 
+├── app.config.ts # App configuration 
+ 
 
 ---
 

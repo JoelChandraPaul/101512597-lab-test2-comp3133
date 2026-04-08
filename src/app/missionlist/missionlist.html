@@ -1,5 +1,7 @@
 <h1>SpaceX Mission Launch List</h1>
 
+<app-missionfilter (yearSelected)="filterByYear($event)"></app-missionfilter>
+
 @if (loading()) {
   <p class="status-text">Loading missions...</p>
 } @else if (error()) {

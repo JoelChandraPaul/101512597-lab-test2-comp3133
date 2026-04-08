@@ -1,1 +1,10 @@
-<p>missionfilter works!</p>
+<div class="filter-container">
+  <label for="year">Filter by Launch Year:</label>
+
+  <select id="year" [(ngModel)]="selectedYear" (change)="onYearChange()">
+    <option value="">All</option>
+    @for (year of years; track year) {
+      <option [value]="year">{{ year }}</option>
+    }
+  </select>
+</div>

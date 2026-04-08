@@ -1,0 +1,62 @@
+h1 {
+  text-align: center;
+  margin: 24px 0;
+  font-size: 32px;
+}
+
+.status-text {
+  text-align: center;
+  font-size: 18px;
+}
+
+.error-text {
+  color: red;
+}
+
+.mission-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.mission-card {
+  background: #eaf4ff;
+  border: 1px solid #cfd8dc;
+  border-radius: 12px;
+  padding: 18px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.mission-image {
+  width: 120px;
+  height: 120px;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto 16px;
+}
+
+.no-image {
+  text-align: center;
+  margin-bottom: 16px;
+  color: #666;
+}
+
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 14px 0;
+}
+
+.links a,
+.details-link {
+  color: #1565c0;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.links a:hover,
+.details-link:hover {
+  text-decoration: underline;
+}

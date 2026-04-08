@@ -1,0 +1,52 @@
+<h1>SpaceX Mission Launch List</h1>
+
+@if (loading()) {
+  <p class="status-text">Loading missions...</p>
+} @else if (error()) {
+  <p class="status-text error-text">{{ error() }}</p>
+} @else {
+  <div class="mission-list">
+    @for (mission of missions(); track mission.flight_number) {
+      <div class="mission-card">
+        @if (mission.links.mission_patch_small) {
+          <img
+            [src]="mission.links.mission_patch_small"
+            [alt]="mission.mission_name"
+            class="mission-image"
+          />
+        } @else {
+          <div class="no-image">No image available</div>
+        }
+
+        <h2>{{ mission.mission_name }}</h2>
+        <p><strong>Flight Number:</strong> {{ mission.flight_number }}</p>
+        <p><strong>Launch Year:</strong> {{ mission.launch_year }}</p>
+        <p><strong>Details:</strong> {{ mission.details || 'No details available.' }}</p>
+        <p><strong>Rocket Name:</strong> {{ mission.rocket.rocket_name }}</p>
+        <p><strong>Rocket Type:</strong> {{ mission.rocket.rocket_type }}</p>
+
+        <div class="links">
+          @if (mission.links.mission_patch_small) {
+            <a [href]="mission.links.mission_patch_small" target="_blank">Patch</a>
+          }
+
+          @if (mission.links.article_link) {
+            <a [href]="mission.links.article_link" target="_blank">Article</a>
+          }
+
+          @if (mission.links.wikipedia) {
+            <a [href]="mission.links.wikipedia" target="_blank">Wikipedia</a>
+          }
+
+          @if (mission.links.video_link) {
+            <a [href]="mission.links.video_link" target="_blank">Video</a>
+          }
+        </div>
+
+        <a class="details-link" [routerLink]="['/mission', mission.flight_number]">
+          View Details
+        </a>
+      </div>
+    }
+  </div>
+}

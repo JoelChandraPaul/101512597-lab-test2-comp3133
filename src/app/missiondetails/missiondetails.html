@@ -3,20 +3,18 @@
 @if (loading()) {
   <p>Loading...</p>
 } @else if (mission(); as selectedMission) {
-  <div class="details-card">
+  <mat-card class="details-card">
     @if (selectedMission.links?.mission_patch_small) {
       <img
+        mat-card-image
         [src]="selectedMission.links?.mission_patch_small"
         class="details-image"
         [alt]="selectedMission.mission_name"
       />
-    } @else {
-      <p>No image available</p>
     }
 
-    <div class="details-content">
+    <mat-card-content>
       <h2>{{ selectedMission.mission_name }}</h2>
-
       <p><strong>Flight Number:</strong> {{ selectedMission.flight_number }}</p>
       <p><strong>Launch Year:</strong> {{ selectedMission.launch_year }}</p>
 
@@ -31,15 +29,17 @@
         @if (selectedMission.links?.article_link) {
           <a [href]="selectedMission.links?.article_link" target="_blank">Article</a>
         }
-
         @if (selectedMission.links?.wikipedia) {
           <a [href]="selectedMission.links?.wikipedia" target="_blank">Wikipedia</a>
         }
-
         @if (selectedMission.links?.video_link) {
           <a [href]="selectedMission.links?.video_link" target="_blank">Video</a>
         }
       </div>
-    </div>
-  </div>
+    </mat-card-content>
+
+    <mat-card-actions>
+      <a mat-raised-button color="primary" routerLink="/">Back to Missions</a>
+    </mat-card-actions>
+  </mat-card>
 }

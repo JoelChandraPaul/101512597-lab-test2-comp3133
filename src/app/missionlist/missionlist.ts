@@ -1,6 +1,8 @@
 import { Component, OnInit, signal, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
+import { MatCardModule } from '@angular/material/card';
+import { MatButtonModule } from '@angular/material/button';
 import { Mission } from '../models/mission';
 import { SpacexService } from '../services/spacex';
 import { Missionfilter } from '../missionfilter/missionfilter';
@@ -8,7 +10,13 @@ import { Missionfilter } from '../missionfilter/missionfilter';
 @Component({
   selector: 'app-missionlist',
   standalone: true,
-  imports: [CommonModule, RouterModule, Missionfilter],
+  imports: [
+    CommonModule,
+    RouterModule,
+    Missionfilter,
+    MatCardModule,
+    MatButtonModule
+  ],
   templateUrl: './missionlist.html',
   styleUrl: './missionlist.css'
 })

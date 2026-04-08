@@ -1,13 +1,15 @@
 import { Component, OnInit, signal, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, RouterModule } from '@angular/router';
+import { MatCardModule } from '@angular/material/card';
+import { MatButtonModule } from '@angular/material/button';
 import { SpacexService } from '../services/spacex';
 import { Mission } from '../models/mission';
 
 @Component({
   selector: 'app-missiondetails',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, RouterModule, MatCardModule, MatButtonModule],
   templateUrl: './missiondetails.html',
   styleUrl: './missiondetails.css'
 })

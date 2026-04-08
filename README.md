@@ -51,6 +51,8 @@ Then open your browser and navigate to:
 
 http://localhost:4200/  
 
+```
+
 ## 🌐 Deployment
 
 This application is deployed using **Vercel**.

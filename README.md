@@ -58,7 +58,7 @@ http://localhost:4200/
 This application is deployed using **Vercel**.
 
 ### Live Deployment Link
-(Add your Vercel link here)
+https://101512597-lab-test2-comp3133.vercel.app/
 
 ### Deployment Steps
 1. Push project to GitHub
